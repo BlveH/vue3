@@ -13,7 +13,7 @@
   </div>
 </template>
 
-<script setup >
+<script lang="ts" setup >
   import ReviewForm from "../components/ReviewForm.vue";
   import ReviewStats from "../components/RatingStats.vue"
   import ReviewList from "../components/ReviewList.vue"

@@ -1,3 +1,9 @@
 {
-  
+  "reviews": [
+    {
+      "text": "ádsadasdasdsa",
+      "rating": 7,
+      "id": 1
+    }
+  ]
 }

@@ -4,17 +4,13 @@
     </div>
 </template>
 
-<script >
-
-export default{
-    name:"Card",
-    props:{
-        reverse:{
-            type:Boolean,
-            default:false
-        }
-    }
+<script lang="ts" setup>
+interface CardProps{
+    reverse?: boolean
 }
+withDefaults(defineProps<CardProps>(),{
+    reverse:false
+})
 </script>
 
 <style  scoped>

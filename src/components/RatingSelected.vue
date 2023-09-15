@@ -16,26 +16,17 @@
   </ul>
 </template>
 
-<script > 
-export default{
-    name:'RatingSelect',
-    data(){
-        return{
-            selected:this.rating
-        }
-    },
-    props:{
-        rating:{
-            type:Number
-        }
-    },
-    watch:{
-        selected(newVal){
-            this.$emit('setRating', newVal)
-        },
-        rating(newVal){
-            this.selected = newVal
-        }
-    }
+<script lang="ts" setup> 
+import { ref, watch } from "vue";
+
+interface RatingSeclectedProps{
+  rating:number
 }
+
+const props = defineProps<RatingSeclectedProps>()
+const emit = defineEmits(["setRating"])
+const selected = ref(props.rating)
+watch(selected,(newVal) =>{
+  emit('setRating', newVal )
+})
 </script>
